@@ -5,7 +5,7 @@ import { getStorage } from 'firebase/storage';
 
 export const firebaseConfig = {
   // Add your Firebase config here
-  apiKey: "AIzaSyDlyySCrr1FRylVzdcUhfTQ-EKyy-pgIas",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: "school-managementsys.firebaseapp.com",
   projectId: "school-managementsys",
   storageBucket: "school-managementsys.firebasestorage.app",
@@ -20,4 +20,5 @@ const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
 export const storage = getStorage(app);
+
 export default app;
